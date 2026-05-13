@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">14</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">76</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">15</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">81</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -659,6 +659,49 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-top:24px;padding:20px;background:rgba(255,68,68,0.06);border:1px solid rgba(255,68,68,0.2);border-radius:10px">
 <div style="font-weight:700;color:var(--hot);margin-bottom:8px">⚠️ If Health = HIGH, Do Not Send</div>
 <div style="font-size:0.9rem;color:var(--text)">A HIGH risk flag means the list is bad. Find the source and fix it upstream. Sending anyway is how you get your domain blocked.</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">📊 Weekly Pipeline Report <span class="badge">Meta → Monday Morning Numbers</span></div>
+<div class="flow-desc">Pulls from CRM, email tool, calendar, and ad accounts every Sunday night. Monday morning you get: emails sent, replies, meetings booked, deals closed, pipeline changes, trends, and the top 3 leads to focus on this week.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Pull Data from Connected Tools</div>
+<div class="step-body">Connects to every configured tool and pulls the reporting period plus 4-week trailing average for comparison. Flags any tool that fails to connect.</div>
+<div class="step-tags"><span class="tag tag-api">CRM</span><span class="tag tag-api">Email</span><span class="tag tag-api">Calendar</span><span class="tag tag-api">Ads</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Normalize &amp; Dedupe</div>
+<div class="step-body">Standardizes timestamps to your timezone, currencies to primary currency. Deduplicates leads across tools (same person in CRM and email counts as one).</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Calculate Metrics &amp; Trends</div>
+<div class="step-body">Current value, comparison average, change %, and trend tag (UP/DOWN/FLAT) for every metric: outreach sent, reply rate, meetings, show rate, proposals, deals closed, pipeline added/lost.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Surface 3-5 Insights</div>
+<div class="step-body">Specific, factual observations: best channel this week, biggest change, concerning trends, positive trends. "Reply rate up 18% driven by LinkedIn day-9 touches" not "Strong week."</div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Compose &amp; Deliver Monday Report</div>
+<div class="step-body">One-line headline, metrics table, insight bullets, top 3 focus leads, and any broken connections. Delivered to your inbox Monday morning before work.</div>
+<div class="step-tags"><span class="tag tag-output">📱 Telegram</span><span class="tag tag-output">📧 Email</span><span class="tag tag-output">💬 Slack</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Read it every Monday.</span> <span style="font-size:0.9rem;color:var(--text)">Don't let it pile up. 5-10 minutes, same time, every week. The discipline of reading it is what makes it useful.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Insights feel generic?</span> <span style="font-size:0.9rem;color:var(--text)">Tighten trend thresholds. "Reply rate up 18%" isn't insight. "Reply rate up 18% driven entirely by LinkedIn day-9 touches" is.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Issues section keeps growing?</span> <span style="font-size:0.9rem;color:var(--text)">If "tool not connecting" shows up 3 weeks in a row, fix the connection. Don't let issues become noise.</span></div>
 </div>
 </div>
 
