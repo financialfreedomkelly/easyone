@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">5</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">33</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">6</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">39</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -231,6 +231,55 @@ footer img{max-width:160px;margin-bottom:10px}
 <div class="step-body">Exports the list with company, vertical, stage, round size, date, source URL, HQ, employees, decision-maker, email, LinkedIn, and outreach hook. Chains to Lead Validator.</div>
 <div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">🔗 → Lead Validator</span></div>
 </div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">📋 Job Posting Buyer Intent <span class="badge">Daily Scan → Hiring = Buying Signal</span></div>
+<div class="flow-desc">Companies hiring for a specific role are signaling they need a specific solution. Hiring a VP Sales? They need sales tooling. Hiring a social media manager? They need content help. This workflow scans job boards daily and builds a target list of companies with active buying intent.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Scan Job Boards for Trigger Roles</div>
+<div class="step-body">Searches Indeed and LinkedIn Jobs for postings matching your trigger titles (e.g. "VP Sales", "Head of Marketing"). Captures company name, role, posting date, location, and posting URL.</div>
+<div class="step-tags"><span class="tag tag-api">Indeed</span><span class="tag tag-api">LinkedIn Jobs</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Filter by ICP Criteria</div>
+<div class="step-body">Drops companies outside your target industries, size bands, and regions. Deduplicates the same company posting across multiple boards.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Infer Buying Need from Role</div>
+<div class="step-body">Maps each trigger role to the need it signals: hiring VP Sales → needs pipeline infrastructure. Hiring Head of Marketing → needs lead gen and content. Connects the inferred need to your offer.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Enrich Buyer Contact Data</div>
+<div class="step-body">Finds the actual buyer (one level above the role being hired). If they're hiring a VP Sales, the buyer is the CEO or COO. Gets their name, title, email, and LinkedIn.</div>
+<div class="step-tags"><span class="tag tag-api">Hunter.io</span><span class="tag tag-api">LinkedIn</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Write Outreach Hooks</div>
+<div class="step-body">Writes a 2-sentence hook referencing the open role and inferred need. Helpful, not creepy: "Saw you're hiring a VP Sales. While you're searching, we help companies at your stage build the pipeline so the new VP hits the ground running."</div>
+</div>
+<div class="step">
+<div class="step-num">Step 6</div>
+<div class="step-name">Compile &amp; Chain to Validator</div>
+<div class="step-body">Exports the list with company, role, posting date, inferred need, buyer name, title, email, LinkedIn, outreach hook, and posting URL. Chains to Lead Validator.</div>
+<div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">🔗 → Lead Validator</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Pick the right trigger roles.</span> <span style="font-size:0.9rem;color:var(--text)">Start with 3-5 specific titles, not 20. The narrower the trigger, the cleaner the inferred need.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Map roles to your offer.</span> <span style="font-size:0.9rem;color:var(--text)">Be honest: which roles would actually buy what you sell? If your offer doesn't map cleanly to a hiring trigger, this workflow won't help.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Reach out within 14 days.</span> <span style="font-size:0.9rem;color:var(--text)">After 30 days the role is filled or the urgency has faded. The fresh window is when this works best.</span></div>
 </div>
 </div>
 
