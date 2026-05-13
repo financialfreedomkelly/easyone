@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">2</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">16</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">3</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">22</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -194,6 +194,54 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="font-weight:600;color:var(--hot);margin-bottom:4px">⚠️ Don't skip the validator</div>
 <div style="font-size:0.9rem;color:var(--text)">This workflow hands its raw output to the Lead Validator. Don't skip that step. Pushing unverified leads into your CRM costs you sender reputation, wasted sales time, and embarrassing follow-ups to dead businesses.</div>
 </div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">✅ The Lead Validator <span class="badge">Chained Step → Every Workflow Ends Here</span></div>
+<div class="flow-desc">Every prospecting workflow feeds into this. Takes raw leads, verifies each one is real, checks email deliverability, dedupes against your CRM, and pushes only clean, verified leads to your destination tool. Don't skip it.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Business Operating Check</div>
+<div class="step-body">Visits each business website to confirm it loads with current content (not parked, not 404, not "domain for sale"). For businesses without websites, searches directories to confirm they still exist.</div>
+<div class="step-tags"><span class="tag tag-api">Web Verification</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Email Deliverability Check</div>
+<div class="step-body">Validates every email: correct format, working MX records, mailbox accepts mail. Tags each as deliverable, risky, or dead. Risky emails are treated as dead unless you override.</div>
+<div class="step-tags"><span class="tag tag-api">Hunter.io</span><span class="tag tag-api">MX Lookup</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Phone Number Format Check</div>
+<div class="step-body">Confirms correct country code, digit count, and checks against known spam or carrier-default numbers. Format validation only — no live calls.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Duplicate Check</div>
+<div class="step-body">Compares each lead against your existing CRM contacts under the same tag. Matches on business name + city or matching domain. Duplicates are skipped automatically.</div>
+<div class="step-tags"><span class="tag tag-api">CRM Dedup</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Compute Final Score &amp; Split</div>
+<div class="step-body">Adjusts the original workflow score: <strong>-30</strong> if business not operating, <strong>-25</strong> if primary email dead, <strong>-10</strong> if phone invalid. Splits into two lists: <span style="color:#00cec9;font-weight:600">CLEAN</span> (score ≥ 60) and <span style="color:var(--hot);font-weight:600">DROPPED</span> (with reasons).</div>
+</div>
+<div class="step">
+<div class="step-num">Step 6</div>
+<div class="step-name">Push Clean Leads to CRM</div>
+<div class="step-body">Pushes every verified lead to your destination tool with the tag you specified. Saves the dropped list as CSV for manual review. Sends you a summary: "Validated N leads. X passed. Y dropped."</div>
+<div class="step-tags"><span class="tag tag-output">📤 CRM Push</span><span class="tag tag-output">📄 CSV (Dropped)</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:rgba(255,68,68,0.06);border:1px solid rgba(255,68,68,0.2);border-radius:10px">
+<div style="font-weight:700;color:var(--hot);margin-bottom:8px">⚠️ Why This Step Exists</div>
+<div style="font-size:0.9rem;color:var(--text)">Sending unverified leads into your outreach kills your sender reputation, wastes your sales team's time, and leads to embarrassing follow-ups to dead businesses. Every prospecting workflow in this library chains into the Lead Validator before anything touches your CRM.</div>
 </div>
 </div>
 
