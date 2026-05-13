@@ -50,7 +50,7 @@ footer img{max-width:160px;margin-bottom:10px}
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
 <div class="stat"><div class="stat-num">2</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">13</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">16</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -142,6 +142,57 @@ footer img{max-width:160px;margin-bottom:10px}
 <div class="step-name">Compile Lead List</div>
 <div class="step-body">Exports the final list with: rank, name, title, company, size, industry, location, verified email, phone, LinkedIn URL, last activity, and ICP score.</div>
 <div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">📋 Markdown</span></div>
+</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">📘 How to Use: LinkedIn Sales Nav Extractor <span class="badge">Setup → Tune → Scale</span></div>
+<div class="flow-desc">Three steps from setup to first run, plus tuning tips after your first 3 batches.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Setup Step 1</div>
+<div class="step-name">Build Your Sales Nav Search</div>
+<div class="step-body">In LinkedIn Sales Navigator, build a search using all the filters that matter: industry, role, region, company size. Save the search URL. This URL is what you hand to the extractor.</div>
+<div class="step-tags"><span class="tag tag-api">LinkedIn Sales Navigator</span></div>
+</div>
+<div class="step">
+<div class="step-num">Setup Step 2</div>
+<div class="step-name">Configure Enrichment</div>
+<div class="step-body">Pick your email provider (Hunter is the default). Decide if you need phone numbers. Choose your filters: require verified email, require phone, require recent LinkedIn activity.</div>
+<div class="step-tags"><span class="tag tag-api">Hunter.io</span><span class="tag tag-api">Apollo</span><span class="tag tag-api">Clearbit</span></div>
+</div>
+<div class="step">
+<div class="step-num">Setup Step 3</div>
+<div class="step-name">Review the First Batch by Hand</div>
+<div class="step-body">Spot-check the first 10-15 leads. Confirm titles, companies, and emails are accurate. If they're off, narrow your Sales Nav search and re-run. This calibration step saves you from pushing bad data downstream.</div>
+<div class="step-tags"><span class="tag tag-operator">👤 Manual QA</span></div>
+</div>
+</div>
+
+<div style="margin-top:30px;padding:24px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips (After Your First 3 Runs)</div>
+
+<div style="margin-bottom:14px">
+<div style="font-weight:600;color:var(--accent2);margin-bottom:4px">Email match rate is low</div>
+<div style="font-size:0.9rem;color:var(--text)">Hunter and similar providers vary by industry. If your match rate is under 60%, try Apollo or Clearbit. Some industries (small private companies) are just hard to enrich.</div>
+</div>
+
+<div style="margin-bottom:14px">
+<div style="font-weight:600;color:var(--accent2);margin-bottom:4px">Wrong-fit titles slipping through</div>
+<div style="font-size:0.9rem;color:var(--text)">Sales Nav title filtering is fuzzy. Tighten your search by adding boolean exclusions, e.g., NOT "manager" if you only want directors and above.</div>
+</div>
+
+<div style="margin-bottom:14px">
+<div style="font-weight:600;color:var(--accent2);margin-bottom:4px">Volume too low</div>
+<div style="font-size:0.9rem;color:var(--text)">If you're extracting under 20 leads per run, your Sales Nav search is too tight. Widen company size, region, or seniority. Volume up first, then quality up via scoring.</div>
+</div>
+
+<div>
+<div style="font-weight:600;color:var(--hot);margin-bottom:4px">⚠️ Don't skip the validator</div>
+<div style="font-size:0.9rem;color:var(--text)">This workflow hands its raw output to the Lead Validator. Don't skip that step. Pushing unverified leads into your CRM costs you sender reputation, wasted sales time, and embarrassing follow-ups to dead businesses.</div>
 </div>
 </div>
 </div>
