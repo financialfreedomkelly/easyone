@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">11</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">63</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">12</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">68</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -504,6 +504,48 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">No one is A-tier?</span> <span style="font-size:0.9rem;color:var(--text)">ICP is too tight, or your prospecting workflow is producing leads in the wrong ballpark.</span></div>
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Disqualifiers misfiring?</span> <span style="font-size:0.9rem;color:var(--text)">Disqualifiers should be hard nos, not soft penalties. If it's negotiable, reduce its weight or remove it.</span></div>
 <div><span style="font-weight:600;color:var(--accent2)">Refine after 30 days.</span> <span style="font-size:0.9rem;color:var(--text)">Track which tier actually closed deals. Adjust your ICP based on real data, not gut feel.</span></div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">✉️ Personalised Cold Email Composer <span class="badge">Outreach → Emails That Get Replies</span></div>
+<div class="flow-desc">Takes enriched leads and writes genuinely personalised cold emails referencing something specific: a recent post, news mention, hire, or product launch. Not "Hi {first_name}" garbage. The difference between 1% and 10% reply rates.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Find the Personalisation Hook</div>
+<div class="step-body">Searches for ONE specific thing per lead: recent LinkedIn post (best), press mention, company news, recent hire, product launch, tech stack signal, or LinkedIn bio detail (last resort). If nothing specific exists, the lead is skipped — no generic emails.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Write the Email Body (60-90 words)</div>
+<div class="step-body">4 sentences: (1) reference the hook honestly, (2) connect it to a challenge in their world, (3) one line on who you are, (4) soft specific CTA. No bullets, no buzzwords, no "I hope this finds you well."</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Write Subject Lines</div>
+<div class="step-body">4-7 word subjects that reference the hook or ask a specific question. No ALL CAPS, no exclamation marks, no emojis. Should look like a human sent it, not a marketing tool.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Self-Check Quality</div>
+<div class="step-body">Verifies: hook appears in body (not just hinted), word count is within limits, no clichés ("I came across your profile"), and the lead would believe a human wrote it. Fails get regenerated once, then skipped.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Compile &amp; Output</div>
+<div class="step-body">Adds email_subject, email_body, hook_referenced, and skip_reason to the lead list. Skipped leads are excluded from the send queue but included for manual review.</div>
+<div class="step-tags"><span class="tag tag-output">📄 Send Queue</span><span class="tag tag-output">⏭️ Skipped List</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Reply rates under 5%?</span> <span style="font-size:0.9rem;color:var(--text)">Hooks aren't specific enough. Better to send 30 great emails than 100 mediocre ones.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Emails feel formulaic?</span> <span style="font-size:0.9rem;color:var(--text)">Loosen the 4-sentence structure. Allow 3-5 sentences with looser pacing if your tone is conversational.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Low open rates?</span> <span style="font-size:0.9rem;color:var(--text)">Tighten subject style to questions that reference their world specifically. Generic questions don't outperform anymore.</span></div>
 </div>
 </div>
 
