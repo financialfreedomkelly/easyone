@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">4</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">28</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">5</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">33</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -193,6 +193,43 @@ footer img{max-width:160px;margin-bottom:10px}
 <div>
 <div style="font-weight:600;color:var(--hot);margin-bottom:4px">⚠️ Don't skip the validator</div>
 <div style="font-size:0.9rem;color:var(--text)">This workflow hands its raw output to the Lead Validator. Don't skip that step. Pushing unverified leads into your CRM costs you sender reputation, wasted sales time, and embarrassing follow-ups to dead businesses.</div>
+</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">💰 Funding Announcement Tracker <span class="badge">Daily Scan → Newly Funded Companies</span></div>
+<div class="flow-desc">Daily scan of TechCrunch, Crunchbase, PR Newswire, and VentureBeat for companies that just raised money in your target verticals. Companies with fresh capital are buying — this gets you there first.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Scan Funding Announcements</div>
+<div class="step-body">Pulls all funding announcements from configured sources over the lookback window. Captures company name, round size, stage, investors, description, founding team, announcement date, and source URL.</div>
+<div class="step-tags"><span class="tag tag-api">TechCrunch</span><span class="tag tag-api">Crunchbase</span><span class="tag tag-api">PR Newswire</span><span class="tag tag-api">VentureBeat</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Filter by ICP Criteria</div>
+<div class="step-body">Drops companies outside your target verticals, funding stages, round size range, and regions. Only companies that match your buyer profile make it through.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Enrich Company &amp; Decision-Maker</div>
+<div class="step-body">Finds company website, employee count, HQ city, and the decision-maker matching your target titles (e.g. Head of Marketing, VP Sales). Gets their email and LinkedIn URL.</div>
+<div class="step-tags"><span class="tag tag-api">Hunter.io</span><span class="tag tag-api">LinkedIn</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Write Funding-Specific Outreach Hooks</div>
+<div class="step-body">Writes a 2-sentence opener referencing the specific funding event: round size, stage, and what they'll likely spend on next. Timely and specific, not generic congrats.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Compile &amp; Chain to Validator</div>
+<div class="step-body">Exports the list with company, vertical, stage, round size, date, source URL, HQ, employees, decision-maker, email, LinkedIn, and outreach hook. Chains to Lead Validator.</div>
+<div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">🔗 → Lead Validator</span></div>
 </div>
 </div>
 </div>
