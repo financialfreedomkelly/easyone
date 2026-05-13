@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">9</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">54</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">10</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">59</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -379,6 +379,49 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Tighten your niche.</span> <span style="font-size:0.9rem;color:var(--text)">"Marketing podcasts" is too broad. "Podcasts for B2B SaaS marketers about demand gen" is right.</span></div>
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Be honest about your angle.</span> <span style="font-size:0.9rem;color:var(--text)">A good angle = topic + counter-intuitive POV + proof. "I'm an expert in AI" is templated. "I built and sold a 7-figure agency using AI workflows in 2024" is specific.</span></div>
 <div><span style="font-weight:600;color:var(--accent2)">Send pitches yourself.</span> <span style="font-size:0.9rem;color:var(--text)">The workflow gets you 90% there. The last 10% (final personalization, sending from your real account, follow-up) needs to be human.</span></div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">🔧 Tech Stack Detector <span class="badge">Qualification → Stack-Aware Pitches</span></div>
+<div class="flow-desc">Visits target company websites, detects what tools they use (HubSpot, Salesforce, Mailchimp, etc.), runs gap analysis against your offer, and writes outreach hooks that reference their actual stack. Pitches that name their tools land harder than generic outreach.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Scan Company Web Properties</div>
+<div class="step-body">Checks page source HTML for script tags and tracking pixels, footer logos, "powered by" badges, job postings mentioning tools, and BuiltWith/Wappalyzer data.</div>
+<div class="step-tags"><span class="tag tag-api">BuiltWith</span><span class="tag tag-api">Wappalyzer</span><span class="tag tag-api">Web Scraper</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Detect &amp; Tag Tools</div>
+<div class="step-body">Flags every tool from your list with detection source, confidence level (high = multiple sources), and adoption depth (deep = visible across many pages).</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Run Gap Analysis</div>
+<div class="step-body">Classifies each company: <span style="color:#00cec9;font-weight:600">Complementary</span> (they use a tool that pairs with yours), <span style="color:var(--warm);font-weight:600">Competitive</span> (they use a rival), or <span style="color:var(--accent2);font-weight:600">Gap</span> (missing a category you fill).</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Write Stack-Aware Outreach Hooks</div>
+<div class="step-body">2-sentence hooks per company: "Saw you're on HubSpot. We help HubSpot teams build the automations the platform can't do natively." Complementary and switch pitches land hardest.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Compile &amp; Chain to Validator</div>
+<div class="step-body">Adds detected_tools, stack_relationship, and stack_aware_hook to the company list. Chains to Lead Validator.</div>
+<div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">🔗 → Lead Validator</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Pick 10-15 tools, not 100.</span> <span style="font-size:0.9rem;color:var(--text)">More tools = more noise, less actionable insight.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Map each tool to a hook type first.</span> <span style="font-size:0.9rem;color:var(--text)">Before running, decide: is each tool complementary, competitive, or gap-revealing for your offer?</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Too many gap pitches?</span> <span style="font-size:0.9rem;color:var(--text)">Gap pitches feel speculative. Lean toward complementary and switch when you have the data.</span></div>
 </div>
 </div>
 
