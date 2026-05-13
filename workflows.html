@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">10</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">59</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">11</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">63</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -504,6 +504,42 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">No one is A-tier?</span> <span style="font-size:0.9rem;color:var(--text)">ICP is too tight, or your prospecting workflow is producing leads in the wrong ballpark.</span></div>
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Disqualifiers misfiring?</span> <span style="font-size:0.9rem;color:var(--text)">Disqualifiers should be hard nos, not soft penalties. If it's negotiable, reduce its weight or remove it.</span></div>
 <div><span style="font-weight:600;color:var(--accent2)">Refine after 30 days.</span> <span style="font-size:0.9rem;color:var(--text)">Track which tier actually closed deals. Adjust your ICP based on real data, not gut feel.</span></div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">📧 Email Deliverability Prechecker <span class="badge">Pre-Send → Protect Sender Reputation</span></div>
+<div class="flow-desc">Run before every outreach. Checks syntax, MX records, mailbox deliverability, flags role-based emails (info@, sales@) and catch-all domains. One 5% bounce-rate sequence costs weeks of rebuilding sender reputation. This costs seconds.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Syntax &amp; Domain Checks</div>
+<div class="step-body">Validates email format (regex) and verifies the domain has working MX records. Drops any email that fails either check — these would hard bounce.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Mailbox Verification</div>
+<div class="step-body">Uses NeverBounce, ZeroBounce, or Hunter to verify each mailbox accepts mail. Tags as VALID (safe), INVALID (bounces), RISKY (catch-all), or UNKNOWN.</div>
+<div class="step-tags"><span class="tag tag-api">NeverBounce</span><span class="tag tag-api">ZeroBounce</span><span class="tag tag-api">Hunter.io</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Role-Based &amp; Catch-All Checks</div>
+<div class="step-body">Flags info@, sales@, contact@, admin@, support@ addresses. Applies your configured handling: REMOVE, FLAG, or INCLUDE for risky, role-based, and catch-all emails.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Calculate List Health &amp; Split</div>
+<div class="step-body">Calculates predicted bounce rate and sender reputation risk: <span style="color:#00cec9;font-weight:600">LOW (&lt;2%)</span>, <span style="color:var(--warm);font-weight:600">MEDIUM (2-5%)</span>, <span style="color:var(--hot);font-weight:600">HIGH (&gt;5% — do not send)</span>. Splits into clean list + removed list with reasons.</div>
+<div class="step-tags"><span class="tag tag-output">📤 Clean List</span><span class="tag tag-output">🚫 Removed List</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:rgba(255,68,68,0.06);border:1px solid rgba(255,68,68,0.2);border-radius:10px">
+<div style="font-weight:700;color:var(--hot);margin-bottom:8px">⚠️ If Health = HIGH, Do Not Send</div>
+<div style="font-size:0.9rem;color:var(--text)">A HIGH risk flag means the list is bad. Find the source and fix it upstream. Sending anyway is how you get your domain blocked.</div>
 </div>
 </div>
 
