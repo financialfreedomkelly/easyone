@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">6</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">39</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">7</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">45</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -330,6 +330,55 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Outreach feels pushy?</span> <span style="font-size:0.9rem;color:var(--text)">Reframe as "we work with teams using [competitor] who…" — curious, not adversarial.</span></div>
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Wrong decision-makers?</span> <span style="font-size:0.9rem;color:var(--text)">Specify exact target titles in your ICP. Getting CFOs when you sell to CMOs means the title matching is too broad.</span></div>
 <div><span style="font-weight:600;color:var(--accent2)">Run quarterly.</span> <span style="font-size:0.9rem;color:var(--text)">Competitors publish new case studies regularly. Quarterly runs keep your target list fresh.</span></div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">🎙️ Podcast Guest Finder <span class="badge">Authority Building → Get Booked on Shows</span></div>
+<div class="flow-desc">Paste a podcast topic or niche. The workflow finds podcasts in that space, identifies the host, surfaces their booking process and contact details, scores fit, and writes a personalized 3-sentence pitch referencing a specific recent episode.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Search Podcast Directories</div>
+<div class="step-body">Searches Apple Podcasts, Spotify, Listen Notes, and Podchaser for podcasts matching your niche. Captures podcast name, host, release cadence, episode count, recent episodes, audience size, and booking URL.</div>
+<div class="step-tags"><span class="tag tag-api">Apple</span><span class="tag tag-api">Spotify</span><span class="tag tag-api">Listen Notes</span><span class="tag tag-api">Podchaser</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Filter for Active &amp; Relevant</div>
+<div class="step-body">Drops dormant podcasts (fewer than 3 episodes in 90 days), podcasts below your audience minimum, wrong region/language, and false-positive topic matches.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Score Podcast Fit</div>
+<div class="step-body"><strong>35 pts:</strong> Topic alignment with your angle. <strong>30 pts:</strong> Audience matches your ICP. <strong>20 pts:</strong> Booking ease (clear guest page or track record). <strong>15 pts:</strong> Host accessibility (public email, LinkedIn, Twitter).</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Enrich Host Contact Data</div>
+<div class="step-body">Finds host's full name, email, LinkedIn URL, Twitter/X handle, and a recent activity signal (latest post or episode topic).</div>
+<div class="step-tags"><span class="tag tag-api">Hunter.io</span><span class="tag tag-api">LinkedIn</span><span class="tag tag-api">Twitter/X</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Write Personalized 3-Sentence Pitches</div>
+<div class="step-body">Each pitch: (1) references a specific recent episode by name, (2) connects your angle to that episode's topic, (3) proposes a concrete interview topic. Feels like it was written by someone who actually listened.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 6</div>
+<div class="step-name">Compile &amp; Chain to Validator</div>
+<div class="step-body">Exports the list with podcast name, host, email, LinkedIn, Twitter, audience, booking URL, fit score, referenced episode, and pitch. Chains to Lead Validator.</div>
+<div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">🔗 → Lead Validator</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Tighten your niche.</span> <span style="font-size:0.9rem;color:var(--text)">"Marketing podcasts" is too broad. "Podcasts for B2B SaaS marketers about demand gen" is right.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Be honest about your angle.</span> <span style="font-size:0.9rem;color:var(--text)">A good angle = topic + counter-intuitive POV + proof. "I'm an expert in AI" is templated. "I built and sold a 7-figure agency using AI workflows in 2024" is specific.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Send pitches yourself.</span> <span style="font-size:0.9rem;color:var(--text)">The workflow gets you 90% there. The last 10% (final personalization, sending from your real account, follow-up) needs to be human.</span></div>
 </div>
 </div>
 
