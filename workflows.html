@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">3</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">22</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">4</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">28</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -194,6 +194,56 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="font-weight:600;color:var(--hot);margin-bottom:4px">⚠️ Don't skip the validator</div>
 <div style="font-size:0.9rem;color:var(--text)">This workflow hands its raw output to the Lead Validator. Don't skip that step. Pushing unverified leads into your CRM costs you sender reputation, wasted sales time, and embarrassing follow-ups to dead businesses.</div>
 </div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">🕵️ Competitor Customer Mapper <span class="badge">Top of Funnel → Steal Their Customers</span></div>
+<div class="flow-desc">Give it a competitor's name. It scans their case studies, testimonial pages, and customer logos, then builds a list of companies already buying that category — so you can pitch your alternative.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Scrape Competitor Customer Pages</div>
+<div class="step-body">Visits each competitor's website and inspects /customers, /case-studies, /testimonials, /reviews, /pricing, and /blog pages. Extracts customer logos, named case study companies, testimonial sources, and any company mentioned in reviews or quotes.</div>
+<div class="step-tags"><span class="tag tag-api">Web Scraper</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Dedupe &amp; Verify Companies</div>
+<div class="step-body">Combines all extracted companies, removes duplicates, and verifies each one is a real, currently operating business. Tags companies that appear as customers of multiple competitors.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Score Fit Against Your ICP</div>
+<div class="step-body"><strong>40 pts:</strong> Industry match. <strong>30 pts:</strong> Company size match. <strong>20 pts:</strong> Geographic match. <strong>10 pts:</strong> Buyer freshness (case study published in last 12 months = still actively a customer).</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Enrich Decision-Makers</div>
+<div class="step-body">For each qualifying company, finds the decision-maker: name, title, work email, and LinkedIn URL. Targets the role most relevant to your offer.</div>
+<div class="step-tags"><span class="tag tag-api">Hunter.io</span><span class="tag tag-api">LinkedIn</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Write Outreach Angles</div>
+<div class="step-body">Writes a 2-sentence outreach angle per lead that references the specific competitor they use. Framed as curious, not adversarial: "We work with teams using [Competitor] who…"</div>
+</div>
+<div class="step">
+<div class="step-num">Step 6</div>
+<div class="step-name">Compile &amp; Chain to Validator</div>
+<div class="step-body">Exports the ranked list with company, industry, size, region, competitor used, decision-maker, email, LinkedIn, fit score, and outreach angle. Chains to the Lead Validator before CRM push.</div>
+<div class="step-tags"><span class="tag tag-output">📄 CSV</span><span class="tag tag-output">🔗 → Lead Validator</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">List too small?</span> <span style="font-size:0.9rem;color:var(--text)">Add 1-2 more competitors, or check their G2 reviews and partner pages instead of just /customers.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Outreach feels pushy?</span> <span style="font-size:0.9rem;color:var(--text)">Reframe as "we work with teams using [competitor] who…" — curious, not adversarial.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Wrong decision-makers?</span> <span style="font-size:0.9rem;color:var(--text)">Specify exact target titles in your ICP. Getting CFOs when you sell to CMOs means the title matching is too broad.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Run quarterly.</span> <span style="font-size:0.9rem;color:var(--text)">Competitors publish new case studies regularly. Quarterly runs keep your target list fresh.</span></div>
 </div>
 </div>
 
