@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">12</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">68</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">13</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">72</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -546,6 +546,45 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Reply rates under 5%?</span> <span style="font-size:0.9rem;color:var(--text)">Hooks aren't specific enough. Better to send 30 great emails than 100 mediocre ones.</span></div>
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Emails feel formulaic?</span> <span style="font-size:0.9rem;color:var(--text)">Loosen the 4-sentence structure. Allow 3-5 sentences with looser pacing if your tone is conversational.</span></div>
 <div><span style="font-weight:600;color:var(--accent2)">Low open rates?</span> <span style="font-size:0.9rem;color:var(--text)">Tighten subject style to questions that reference their world specifically. Generic questions don't outperform anymore.</span></div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">🔄 Multi-Channel Sequencer <span class="badge">Outreach → 7 Touches / 21 Days / 3 Channels</span></div>
+<div class="flow-desc">One lead gets touched 7 times over 21 days across email, LinkedIn, and SMS. Handles timing, channel rotation, and "stop if they reply" logic. Single-channel cold email rarely beats 5% reply rates; multi-channel often hits 12-18%.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Initialize Sequence</div>
+<div class="step-body">Tags each lead with start date and step=0. Verifies channel availability per lead (email, LinkedIn URL, phone for SMS). Maps each lead to their available channel path.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Execute 7-Touch Schedule</div>
+<div class="step-body"><strong>Day 1:</strong> Email 1 (personalised). <strong>Day 3:</strong> LinkedIn connect. <strong>Day 5:</strong> Email 2 (follow-up). <strong>Day 9:</strong> LinkedIn DM. <strong>Day 13:</strong> Email 3 (new angle). <strong>Day 17:</strong> SMS. <strong>Day 21:</strong> Break-up email. Throttled to 50 emails/day.</div>
+<div class="step-tags"><span class="tag tag-api">Email</span><span class="tag tag-api">LinkedIn</span><span class="tag tag-api">SMS</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Monitor Replies &amp; Auto-Stop</div>
+<div class="step-body">Continuously checks email inbox, LinkedIn DMs, and SMS for replies. The moment a reply is detected, all remaining touches stop instantly. Unsubscribes are flagged and never re-enrolled.</div>
+<div class="step-tags"><span class="tag tag-operator">⚡ Instant Stop</span></div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Weekly Health Report</div>
+<div class="step-body">Active leads, touches sent by channel, replies by step, meetings booked, reply rate, book rate, and drop-offs. Delivered to your inbox every week.</div>
+<div class="step-tags"><span class="tag tag-output">📊 Weekly Report</span></div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Start email-only.</span> <span style="font-size:0.9rem;color:var(--text)">Get email working first, add LinkedIn after 30 days, SMS after 60. Quality over channel count.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Touches 2-4 underperform?</span> <span style="font-size:0.9rem;color:var(--text)">They're too similar to touch 1. Each touch needs a distinctly different angle, proof point, or hook.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Break-up email gets the most replies?</span> <span style="font-size:0.9rem;color:var(--text)">That's normal. Email 4 often gets 2-3x the reply rate. Don't skip it.</span></div>
 </div>
 </div>
 
