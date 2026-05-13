@@ -49,8 +49,8 @@ footer img{max-width:160px;margin-bottom:10px}
 <h1>AI-Powered <span>Workflows</span></h1>
 <p>Automated prospecting pipelines that find leads, score them, enrich with contact data, and deliver ready-to-close lists.</p>
 <div class="stats">
-<div class="stat"><div class="stat-num">7</div><div class="stat-label">Workflows</div></div>
-<div class="stat"><div class="stat-num">45</div><div class="stat-label">Automated Steps</div></div>
+<div class="stat"><div class="stat-num">8</div><div class="stat-label">Workflows</div></div>
+<div class="stat"><div class="stat-num">50</div><div class="stat-label">Automated Steps</div></div>
 <div class="stat"><div class="stat-num">4</div><div class="stat-label">APIs Connected</div></div>
 <div class="stat"><div class="stat-num">~60s</div><div class="stat-label">Per Sweep</div></div>
 </div>
@@ -379,6 +379,48 @@ footer img{max-width:160px;margin-bottom:10px}
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Tighten your niche.</span> <span style="font-size:0.9rem;color:var(--text)">"Marketing podcasts" is too broad. "Podcasts for B2B SaaS marketers about demand gen" is right.</span></div>
 <div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Be honest about your angle.</span> <span style="font-size:0.9rem;color:var(--text)">A good angle = topic + counter-intuitive POV + proof. "I'm an expert in AI" is templated. "I built and sold a 7-figure agency using AI workflows in 2024" is specific.</span></div>
 <div><span style="font-weight:600;color:var(--accent2)">Send pitches yourself.</span> <span style="font-size:0.9rem;color:var(--text)">The workflow gets you 90% there. The last 10% (final personalization, sending from your real account, follow-up) needs to be human.</span></div>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="flow-section">
+<div class="flow-title">🎯 Buyer Persona Scorer <span class="badge">Qualification → A/B/C/D Tier Filter</span></div>
+<div class="flow-desc">Define your ideal customer once: revenue range, team size, industry, region, buyer titles. Every new lead gets auto-scored against that profile. Your default "is this even worth my time?" filter — chains after any prospecting workflow.</div>
+<div class="flow-steps">
+<div class="step active">
+<div class="step-num">Step 1</div>
+<div class="step-name">Score Industry Match (25 pts)</div>
+<div class="step-body">Full points if the lead's industry is in your target list. 10 points for adjacent industries. Zero for everything else.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 2</div>
+<div class="step-name">Score Revenue Fit (25 pts)</div>
+<div class="step-body">Full points if revenue falls within your range. Loses 1 point per 10% deviation outside the band. Below range = can't afford you. Above range = different buying process.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 3</div>
+<div class="step-name">Score Team Size Fit (20 pts)</div>
+<div class="step-body">Full points if team size is in your sweet spot. Below minimum = too small to afford. Above maximum = too bureaucratic to close.</div>
+</div>
+<div class="step">
+<div class="step-num">Step 4</div>
+<div class="step-name">Score Region &amp; Title Match (25 pts)</div>
+<div class="step-body">10 points for region match. 15 points if a contact has one of your target buyer titles (8 for adjacent titles like "Director" when you target "VP").</div>
+</div>
+<div class="step">
+<div class="step-num">Step 5</div>
+<div class="step-name">Apply Disqualifiers &amp; Compute Final Score</div>
+<div class="step-body">Hard-no criteria get <strong>-50 points each</strong> (PE-owned, gov contracts, etc.). Final score tags each lead: <span style="color:#00cec9;font-weight:600">A-tier (80+)</span>, <span style="color:var(--accent2);font-weight:600">B-tier (60-79)</span>, <span style="color:var(--warm);font-weight:600">C-tier (40-59)</span>, <span style="color:var(--hot);font-weight:600">D-tier (&lt;40)</span>. Includes gap reasons explaining every deduction.</div>
+</div>
+</div>
+
+<div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px">
+<div style="font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:16px">🔧 Tuning Tips</div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Everyone is A-tier?</span> <span style="font-size:0.9rem;color:var(--text)">Your ICP is too lenient. Tighten revenue or team-size bands. A real ICP rejects most leads.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">No one is A-tier?</span> <span style="font-size:0.9rem;color:var(--text)">ICP is too tight, or your prospecting workflow is producing leads in the wrong ballpark.</span></div>
+<div style="margin-bottom:10px"><span style="font-weight:600;color:var(--accent2)">Disqualifiers misfiring?</span> <span style="font-size:0.9rem;color:var(--text)">Disqualifiers should be hard nos, not soft penalties. If it's negotiable, reduce its weight or remove it.</span></div>
+<div><span style="font-weight:600;color:var(--accent2)">Refine after 30 days.</span> <span style="font-size:0.9rem;color:var(--text)">Track which tier actually closed deals. Adjust your ICP based on real data, not gut feel.</span></div>
 </div>
 </div>
 
